@@ -47,8 +47,8 @@
   border-radius: 10px;
   transition: all 0.5s;
 }
-@media (max-width:739px){
-    #clock-style li{
-        color: aqua;
-    }
+@media (max-width:1023px){
+  #clock-style{
+    display: none;
+}
 }

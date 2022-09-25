@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 5px 0;
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+}
+header{
+    position: relative;
+    z-index: 1;
+}
+
+#nav{
+    width: 100%;
+    height: 48px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#nav .nav-item{
+    color: white;
+    margin-right: 16px;
+    
+}
+#nav .nav-item a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 5px;
+    line-height: 48px;
+}
+#nav .nav-item a:hover{
+    text-decoration: underline;
+}
+#nav .nav-item span{
+    border-radius: 50%;
+    padding: 6.5px;
+    margin-bottom: 4px;
+}
+#nav .nav-item img:hover,
+#nav .nav-item span:hover{
+    background-color: rgba(124, 124, 124, 0.381);
+    cursor: pointer;
+}
+#nav .nav-item img{
+    width: 32px;
+    padding: 4px;
+    border-radius: 50%;
+}
+.nav-overlay-apps{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: none;
+}
+.nav-overlay-account{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: none;
+}
+#nav-apps{
+    position: absolute;
+    top: 100%;
+    border: 2px solid black;
+    right: 0;
+    border-radius: 10px;
+    background-color: rgb(45, 46, 48);
+    width: 316px;
+    height: 430px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.404);
+    display: none;
+}
+#nav-apps .apps-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    overflow-y: scroll;
+    text-align: center;
+}
+#nav-apps .apps-container a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nav-apps .apps-item{
+    width: 80px;
+    height: 90px;
+    text-align: center;
+    margin: 8px;
+    border-radius: 10px;
+}
+#nav-apps .apps-item:hover{
+    cursor: pointer;
+    background-color: #404040;
+}
+#nav-apps .apps-item-img{
+    width: 40px;
+    margin: 10px 0 10px;
+}
+#nav-apps .apps-item-name{
+    color: white;
+    font-size: 14px;
+}
+#nav-apps .apps-more{
+    width: 150px;
+    border: 1px solid rgb(95, 99, 104);
+    margin: 20px auto 20px;
+    padding: 8px 5px;
+    border-radius: 10px;
+}
+#nav-apps .apps-more:hover{
+    background-color: rgb(60, 64, 67);
+}
+#nav-apps .apps-more a{
+text-decoration: none;
+color: rgb(114, 180, 235);
+font-size: 13px;
+}
+#nav-account{
+    position: absolute;
+    top: 100%;
+    border: 2px solid black;
+    right: 0;
+    border-radius: 10px;
+    background-color: rgb(45, 46, 48);
+    width: 316px;
+    height: 560px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.404);
+    display: none;
+}
+#nav-account .account-container{
+    width: 100%;
+    padding-top: 20px;
+}
+.nav-apps-input:checked ~ #nav-apps{
+    display: block;
+}
+.nav-apps-input:checked ~ #nav-overlay-apps{
+    display: block;
+}
+
+.nav-account-input:checked ~ #nav-overlay-account{
+    display: block;
+}
+.nav-account-input:checked ~ #nav-account{
+    display: block;
+}
+main{
+    position: absolute;
+    background-image: url(./assets/img/background/pc/1.jpg);
+    top: -5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+main .container{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    margin: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .container .gg-logo{
+    margin-top: 8px;
+}
+main .container .gg-search{
+    margin-top: 24px;
+    width: 560px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+}
+main  .gg-search .material-symbols-outlined{
+    color: rgb(95, 99, 104);
+    margin: 12px 0px 11px 19px;
+    font-size: 20px;
+}
+main  .gg-search .gg-search-input{
+    position: absolute;
+    top: 13px;
+    width: 460px;
+    margin: 0 5px;
+    border: 0px solid green;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 550;
+    color: rgb(95, 99, 104);
+}
+
+main  .gg-search .gg-search-input:focus{
+        outline: none;
+}
+main  .gg-search .gg-search-input:focus ~ main .container .gg-search{
+    border-radius: 10px;
+}
+
+main .gg-search .gg-search-voice{
+    position: absolute;
+    right: 18px;
+    top: 5px;
+}
+main .container .gg-list{
+    width: 560px;
+    height: 228px;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .container .gg-list .item{
+    width: 20%;
+    height: 112px;
+    border-radius: 4px;
+    margin: 0;
+}
+main .container .gg-list .item a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+main .container .item .gg-item-logo{
+    width: 24px;
+    background-color: white;
+    display: block;
+    margin: 16px auto;
+    padding: 12px;
+    border-radius: 100%;
+}
+main .container .gg-list span{
+    display: block;
+    text-align: center;
+}
+
+@media (max-width:739px){
+    body{
+        height: 100%;
+        background-color: black;
+    }
+main{
+    background-image: url(./assets/img/background/mobile/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+main .container .gg-search{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+}
+main .container .gg-search .gg-search-input{
+    background-color: transparent;
+    width: 70%;
+}
+main .container .gg-list{
+    width: 80%;
+}
+main .container .gg-list .item{
+    width: 33%;
+}
+}

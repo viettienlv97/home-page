@@ -1,0 +1,52 @@
+#clock-style{
+    position: relative;
+}
+#clock-style li {
+  list-style: none;
+  height: 30px;
+  width: 30px;
+  margin-top: -5px;
+  padding: 0;
+  font-size: 22ox;
+  line-height: 30px;
+  color: #000000;
+  font-weight: 700;
+}
+
+#clock-style .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#clock-style .clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 30px;
+  background-color: #a4a4a42c;
+  box-shadow: 2px 2px 10px 3px #303030;
+  border-radius: 20px;
+  margin-top: 500px;
+}
+
+#clock-style .time-box {
+  width: 30px;
+  height: 100%;
+}
+
+#clock-style .numbers {
+  background-color: #27272700;
+  box-shadow: 2px 2px 10px 3px #2f2f2f;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+@media (max-width:739px){
+    #clock-style li{
+        color: aqua;
+    }
+}

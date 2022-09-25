@@ -4,6 +4,14 @@
 }
 body{
     font-family: 'Open Sans',sans-serif;
+    -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+}
+input,
+textarea {
+     -moz-user-select: text;
 }
 header{
     position: relative;

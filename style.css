@@ -153,6 +153,7 @@ font-size: 13px;
 }
 .nav-apps-input:checked ~ #nav-apps{
     display: block;
+    z-index: 4 !important;
 }
 .nav-apps-input:checked ~ #nav-overlay-apps{
     display: block;

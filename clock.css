@@ -21,6 +21,7 @@
   height: 30px;
   top: 460px;
   right: 20px;
+  bottom: 0;
 }
 
 #clock-style .clock {
